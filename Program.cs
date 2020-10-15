@@ -28,10 +28,8 @@ namespace BOGOL
                         int value;
 
                         if(cword.Length == 6){
-                            int firstVal;
-                            int secondVal;
-                            bool first = int.TryParse(cword[3], out firstVal);
-                            bool second = int.TryParse(cword[5], out secondVal);
+                            bool first = int.TryParse(cword[3], out int firstVal);
+                            bool second = int.TryParse(cword[5], out int secondVal);
                             if (!first)
                             {
                                 switch (cword[3])
@@ -79,18 +77,23 @@ namespace BOGOL
                                 {
                                     case "a":
                                         intArray[0] = firstVal + secondVal;
+                                        Console.WriteLine("variable a now has the value " + intArray[0]);
                                         break;
                                     case "b":
                                         intArray[1] = firstVal + secondVal;
+                                        Console.WriteLine("variable b now has the value " + intArray[1]);
                                         break;
                                     case "c":
                                         intArray[2] = firstVal + secondVal;
+                                        Console.WriteLine("variable c now has the value " + intArray[2]);
                                         break;
                                     case "d":
                                         intArray[3] = firstVal + secondVal;
+                                        Console.WriteLine("variable d now has the value " + intArray[3]);
                                         break;
                                     case "e":
                                         intArray[4] = firstVal + secondVal;
+                                        Console.WriteLine("variable e now has the value " + intArray[4]);
                                         break;
                                 }
                             }
