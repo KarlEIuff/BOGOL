@@ -71,6 +71,28 @@ namespace BOGOL
                             case "e":
                                 Console.WriteLine(intArray[4]);
                                 break;
+                            case "all":
+                                for(int i = 0; i < 5; i++)
+                                {
+                                    if(i == 0)
+                                    {
+                                        Console.WriteLine("a = " + intArray[i]);
+                                    } else if(i == 1)
+                                    {
+                                        Console.WriteLine("b = " + intArray[i]);
+                                    } else if(i == 2)
+                                    {
+                                        Console.WriteLine("c = " + intArray[i]);
+                                    } else if (i == 3)
+                                    {
+                                        Console.WriteLine("d = " + intArray[i]);
+                                    } else if (i == 4)
+                                    {
+                                        Console.WriteLine("e = " + intArray[i]);
+                                    }
+
+                                }
+                                break;
                             default:
                                 Console.WriteLine("That variable does not exist!");
                                 break;
