@@ -26,32 +26,84 @@ namespace BOGOL
                         quit = true;
                         break;
                     case "set":
-                        int value = int.Parse(cword[3]);
-                        switch (cword[1])
+                        int value;
+
+                        bool success = int.TryParse(cword[3], out value);
+                        if (success)
                         {
-                            case "a":
-                                intArray[0] = value;
-                                Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
-                                break;
-                            case "b":
-                                intArray[1] = value;
-                                Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
-                                break;
-                            case "c":
-                                intArray[2] = value;
-                                Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
-                                break;
-                            case "d":
-                                intArray[3] = value;
-                                Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
-                                break;
-                            case "e":
-                                intArray[4] = value;
-                                Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
-                                break;
-                            default:
-                                Console.WriteLine("That is outside of the array!");
-                                break;
+                            value = int.Parse(cword[3]);
+                            switch (cword[1])
+                            {
+                                case "a":
+                                    intArray[0] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                case "b":
+                                    intArray[1] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                case "c":
+                                    intArray[2] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                case "d":
+                                    intArray[3] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                case "e":
+                                    intArray[4] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                default:
+                                    Console.WriteLine("That is outside of the array!");
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            if (cword[3].Contains("a"))
+                            {
+                                value = intArray[0];
+                            }
+                            else if (cword[3].Contains("b"))
+                            {
+                                value = intArray[1];
+                            }
+                            else if (cword[3].Contains("c"))
+                            {
+                                value = intArray[2];
+                            }
+                            else if (cword[3].Contains("d"))
+                            {
+                                value = intArray[3];
+                            }
+                            else if (cword[3].Contains("e"))
+                            {
+                                value = intArray[4];
+                            }
+                            switch (cword[1])
+                            {
+                                case "a":
+                                    intArray[0] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                case "b":
+                                    intArray[1] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                case "c":
+                                    intArray[2] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                case "d":
+                                    intArray[3] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                                case "e":
+                                    intArray[4] = value;
+                                    Console.WriteLine("variable " + cword[1] + " now has the value " + cword[3]);
+                                    break;
+                            }
                         }
                         break;
                     case "print":
