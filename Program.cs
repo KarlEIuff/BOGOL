@@ -97,6 +97,107 @@ namespace BOGOL
                                         break;
                                 }
                             }
+                            else if (cword[4].Contains("-"))
+                            {
+                                switch (cword[1])
+                                {
+                                    case "a":
+                                        intArray[0] = firstVal - secondVal;
+                                        Console.WriteLine("variable a now has the value " + intArray[0]);
+                                        break;
+                                    case "b":
+                                        intArray[1] = firstVal - secondVal;
+                                        Console.WriteLine("variable b now has the value " + intArray[1]);
+                                        break;
+                                    case "c":
+                                        intArray[2] = firstVal - secondVal;
+                                        Console.WriteLine("variable c now has the value " + intArray[2]);
+                                        break;
+                                    case "d":
+                                        intArray[3] = firstVal - secondVal;
+                                        Console.WriteLine("variable d now has the value " + intArray[3]);
+                                        break;
+                                    case "e":
+                                        intArray[4] = firstVal - secondVal;
+                                        Console.WriteLine("variable e now has the value " + intArray[4]);
+                                        break;
+                                }
+                            } else if (cword[4].Contains("*"))
+                            {
+                                switch (cword[1])
+                                {
+                                    case "a":
+                                        intArray[0] = firstVal * secondVal;
+                                        Console.WriteLine("variable a now has the value " + intArray[0]);
+                                        break;
+                                    case "b":
+                                        intArray[1] = firstVal * secondVal;
+                                        Console.WriteLine("variable b now has the value " + intArray[1]);
+                                        break;
+                                    case "c":
+                                        intArray[2] = firstVal * secondVal;
+                                        Console.WriteLine("variable c now has the value " + intArray[2]);
+                                        break;
+                                    case "d":
+                                        intArray[3] = firstVal * secondVal;
+                                        Console.WriteLine("variable d now has the value " + intArray[3]);
+                                        break;
+                                    case "e":
+                                        intArray[4] = firstVal * secondVal;
+                                        Console.WriteLine("variable e now has the value " + intArray[4]);
+                                        break;
+                                }
+                            } else if (cword[4].Contains("/"))
+                            {
+                                switch (cword[1])
+                                {
+                                    case "a":
+                                        intArray[0] = firstVal / secondVal;
+                                        Console.WriteLine("variable a now has the value " + intArray[0]);
+                                        break;
+                                    case "b":
+                                        intArray[1] = firstVal / secondVal;
+                                        Console.WriteLine("variable b now has the value " + intArray[1]);
+                                        break;
+                                    case "c":
+                                        intArray[2] = firstVal / secondVal;
+                                        Console.WriteLine("variable c now has the value " + intArray[2]);
+                                        break;
+                                    case "d":
+                                        intArray[3] = firstVal / secondVal;
+                                        Console.WriteLine("variable d now has the value " + intArray[3]);
+                                        break;
+                                    case "e":
+                                        intArray[4] = firstVal / secondVal;
+                                        Console.WriteLine("variable e now has the value " + intArray[4]);
+                                        break;
+                                }
+                            } else if (cword[4].Contains("%"))
+                            {
+                                switch (cword[1])
+                                {
+                                    case "a":
+                                        intArray[0] = firstVal % secondVal;
+                                        Console.WriteLine("variable a now has the value " + intArray[0]);
+                                        break;
+                                    case "b":
+                                        intArray[1] = firstVal % secondVal;
+                                        Console.WriteLine("variable b now has the value " + intArray[1]);
+                                        break;
+                                    case "c":
+                                        intArray[2] = firstVal % secondVal;
+                                        Console.WriteLine("variable c now has the value " + intArray[2]);
+                                        break;
+                                    case "d":
+                                        intArray[3] = firstVal % secondVal;
+                                        Console.WriteLine("variable d now has the value " + intArray[3]);
+                                        break;
+                                    case "e":
+                                        intArray[4] = firstVal % secondVal;
+                                        Console.WriteLine("variable e now has the value " + intArray[4]);
+                                        break;
+                                }
+                            }
                             break;
                         }
 
