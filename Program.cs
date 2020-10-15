@@ -10,7 +10,6 @@ namespace BOGOL
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Hello and welcome to BOGOL!\nQuit by writing 'quit'!");
             String command;
             bool quit = false;
@@ -28,10 +27,79 @@ namespace BOGOL
                     case "set":
                         int value;
 
+                        if(cword.Length == 6){
+                            int firstVal;
+                            int secondVal;
+                            bool first = int.TryParse(cword[3], out firstVal);
+                            bool second = int.TryParse(cword[5], out secondVal);
+                            if (!first)
+                            {
+                                switch (cword[3])
+                                {
+                                    case "a":
+                                        firstVal = intArray[0];
+                                        break;
+                                    case "b":
+                                        firstVal = intArray[1];
+                                        break;
+                                    case "c":
+                                        firstVal = intArray[2];
+                                        break;
+                                    case "d":
+                                        firstVal = intArray[3];
+                                        break;
+                                    case "e":
+                                        firstVal = intArray[4];
+                                        break;
+                                }
+                            }
+                            if (!second)
+                            {
+                                switch (cword[5])
+                                {
+                                    case "a":
+                                        secondVal = intArray[0];
+                                        break;
+                                    case "b":
+                                        secondVal = intArray[1];
+                                        break;
+                                    case "c":
+                                        secondVal = intArray[2];
+                                        break;
+                                    case "d":
+                                        secondVal = intArray[3];
+                                        break;
+                                    case "e":
+                                        secondVal = intArray[4];
+                                        break;
+                                }
+                            }
+                            if (cword[4].Contains("+")){
+                                switch (cword[1])
+                                {
+                                    case "a":
+                                        intArray[0] = firstVal + secondVal;
+                                        break;
+                                    case "b":
+                                        intArray[1] = firstVal + secondVal;
+                                        break;
+                                    case "c":
+                                        intArray[2] = firstVal + secondVal;
+                                        break;
+                                    case "d":
+                                        intArray[3] = firstVal + secondVal;
+                                        break;
+                                    case "e":
+                                        intArray[4] = firstVal + secondVal;
+                                        break;
+                                }
+                            }
+                            break;
+                        }
+
                         bool success = int.TryParse(cword[3], out value);
                         if (success)
                         {
-                            value = int.Parse(cword[3]);
                             switch (cword[1])
                             {
                                 case "a":
@@ -142,7 +210,6 @@ namespace BOGOL
                                     {
                                         Console.WriteLine("e = " + intArray[i]);
                                     }
-
                                 }
                                 break;
                             default:
